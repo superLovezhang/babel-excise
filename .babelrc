@@ -1,0 +1,23 @@
+{
+    "presets": [
+        [
+            "@babel/env",
+            {
+                "useBuiltIns": "usage",
+                "corejs": 3
+            }
+        ]
+    ],
+    "plugins": [
+        [
+            "@babel/plugin-transform-runtime",
+            {
+                // "corejs": 3, // 从引入corejs所有内容到当前文件变成导入并且给个新名字 减少代码 防治全局污染
+                // "proposals": true // 搭配corejs选项 启用该功能能够导入js提案
+                // "helpers": true, // 是否需要辅助函数导包引入而不是在每个文件声明并创建辅助函数
+                // "regenerator": true // 能够将async await generator的导入函数转换一下?f
+            }
+        ],
+        "@babel/plugin-proposal-class-properties"
+    ]
+}
